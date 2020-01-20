@@ -1,8 +1,8 @@
-import numerals_to_words
-from numerals_to_words import time_numerals_to_words
+from utils.validate import input_hour, input_minute
+from utils.numerals_to_words import TimeNumeralsToWords
 
-hour = int(input("Type hour (1 - 12) ----> "))
-minute = int(input("Type minute (0 to 59) ----> "))
-time_words = time_numerals_to_words(hour, minute)
-
-print(time_words)
+hour = input_hour()
+minute = input_minute()
+word_transform = TimeNumeralsToWords(hour, minute)
+word_transform.time_numerals_to_words()
+print(word_transform.to_string())
