@@ -52,7 +52,7 @@ class TimeToWordsValidator(unittest.TestCase):
 
         # These values are string due to we are simulating the values given by input
         valid_hour = validate.validate_hour("5")
-        invalid_hour_value = validate.validate_hour('test')
+        invalid_hour_value = validate.validate_hour("test")
         invalid_hour_range = validate.validate_hour("25")
 
         self.assertTrue(valid_hour)
@@ -64,10 +64,9 @@ class TimeToWordsValidator(unittest.TestCase):
 
         # These values are string due to we are simulating the values given by input
         valid_min = validate.validate_minute("35")
-        invalid_min_value = validate.validate_hour('test minute')
+        invalid_min_value = validate.validate_hour("test minute")
         invalid_min_range = validate.validate_hour("70")
 
         self.assertTrue(valid_min)
         self.assertFalse(invalid_min_value)
         self.assertFalse(invalid_min_range)
-
